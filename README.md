@@ -41,19 +41,24 @@ cd pandoc-md2pdf-md2html && chmod +x ./*.sh
 
 # 2) 中文 PDF（中文需要 --cjk）
 ../pandoc-md2pdf-md2html/md2pdf.sh plotting-algorithms-mandelbrot.zh-CN.md \
-    --cjk --toc --number-sections -o plotting-algorithms-mandelbrot.zh-CN.pdf
+    --cjk --toc --number-sections -o plotting-algorithms-mandelbrot.zh-CN.pdf \
+    -- --shift-heading-level-by=-1
 
 # 3) 中文 HTML（使用本仓库的样式表，资源保持外链，体积小）
 ../pandoc-md2pdf-md2html/md2html.sh plotting-algorithms-mandelbrot.zh-CN.md \
     --toc --number-sections --no-css --css=assets/style.css \
-    -o plotting-algorithms-mandelbrot.zh-CN.html
+    -o plotting-algorithms-mandelbrot.zh-CN.html \
+    -- --shift-heading-level-by=-1
 ```
+
+> 注：源文件把标题写在 YAML 元数据里（`title`/`subtitle`），正文从二级标题开始，因此构建时用
+> `--shift-heading-level-by=-1` 把章节提升一级，PDF 中的章节编号才会是 `1`、`1.1` 而不是 `0.1`。
 
 PowerShell（Windows）：
 
 ```powershell
-./pandoc-md2pdf-md2html/md2pdf.ps1  plotting-algorithms-mandelbrot.zh-CN.md -Cjk -Toc -NumberSections -Output plotting-algorithms-mandelbrot.zh-CN.pdf
-./pandoc-md2pdf-md2html/md2html.ps1 plotting-algorithms-mandelbrot.zh-CN.md -Toc -NumberSections -NoCss -Css assets/style.css -Output plotting-algorithms-mandelbrot.zh-CN.html
+./pandoc-md2pdf-md2html/md2pdf.ps1  plotting-algorithms-mandelbrot.zh-CN.md -Cjk -Toc -NumberSections -Output plotting-algorithms-mandelbrot.zh-CN.pdf -ExtraArgs '--shift-heading-level-by=-1'
+./pandoc-md2pdf-md2html/md2html.ps1 plotting-algorithms-mandelbrot.zh-CN.md -Toc -NumberSections -NoCss -Css assets/style.css -Output plotting-algorithms-mandelbrot.zh-CN.html -ExtraArgs '--shift-heading-level-by=-1'
 ```
 
 ## 许可证

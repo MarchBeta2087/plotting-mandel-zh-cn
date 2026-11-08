@@ -7,8 +7,6 @@ source-revision: "1380046103"
 license: "正文：CC BY-SA 4.0（见 LICENSE）；媒体文件许可见 LICENSES.md"
 ---
 
-# Mandelbrot 集的绘制算法
-
 绘制 Mandelbrot 集以及其他分形有许多程序和算法，其中一些已在分形生成软件中有所描述。这些程序使用各种算法来高效地确定各个像素的颜色。
 
 [![在 $0.001643721971153 - 0.822467633298876i$ 处不断放大的影片的静帧——点击可播放该影片（图像与影片：公有领域，YGingras）](images/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png)](videos/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogv)

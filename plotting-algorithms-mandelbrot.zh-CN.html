@@ -34,61 +34,70 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#mandelbrot-集的绘制算法"
-id="toc-mandelbrot-集的绘制算法"><span
-class="toc-section-number">1</span> Mandelbrot 集的绘制算法</a>
-<ul>
 <li><a href="#逃逸时间算法" id="toc-逃逸时间算法"><span
-class="toc-section-number">1.1</span> 逃逸时间算法</a>
+class="toc-section-number">1</span> 逃逸时间算法</a>
 <ul>
 <li><a href="#未优化的朴素逃逸时间算法"
 id="toc-未优化的朴素逃逸时间算法"><span
-class="toc-section-number">1.1.1</span>
-未优化的朴素逃逸时间算法</a></li>
+class="toc-section-number">1.1</span> 未优化的朴素逃逸时间算法</a></li>
 <li><a href="#优化的逃逸时间算法" id="toc-优化的逃逸时间算法"><span
-class="toc-section-number">1.1.2</span> 优化的逃逸时间算法</a></li>
+class="toc-section-number">1.2</span> 优化的逃逸时间算法</a></li>
 </ul></li>
 <li><a href="#着色算法" id="toc-着色算法"><span
-class="toc-section-number">1.2</span> 着色算法</a>
+class="toc-section-number">2</span> 着色算法</a>
 <ul>
 <li><a href="#直方图着色" id="toc-直方图着色"><span
-class="toc-section-number">1.2.1</span> 直方图着色</a></li>
+class="toc-section-number">2.1</span> 直方图着色</a></li>
 <li><a href="#连续平滑着色" id="toc-连续平滑着色"><span
-class="toc-section-number">1.2.2</span> 连续（平滑）着色</a></li>
+class="toc-section-number">2.2</span> 连续（平滑）着色</a></li>
 <li><a href="#指数映射与循环迭代" id="toc-指数映射与循环迭代"><span
-class="toc-section-number">1.2.3</span> 指数映射与循环迭代</a></li>
+class="toc-section-number">2.3</span> 指数映射与循环迭代</a></li>
 <li><a href="#直接把迭代次数映射为颜色"
 id="toc-直接把迭代次数映射为颜色"><span
-class="toc-section-number">1.2.4</span>
-直接把迭代次数映射为颜色</a></li>
+class="toc-section-number">2.4</span> 直接把迭代次数映射为颜色</a>
+<ul>
+<li><a href="#v-指归一化的经指数映射的循环迭代次数"
+id="toc-v-指归一化的经指数映射的循环迭代次数"><span
+class="toc-section-number">2.4.1</span> v
+指归一化的、经指数映射的循环迭代次数</a></li>
+<li><a href="#fv-指-srgb-传递函数" id="toc-fv-指-srgb-传递函数"><span
+class="toc-section-number">2.4.2</span> f(v) 指 sRGB 传递函数</a></li>
+<li><a href="#hsv-着色" id="toc-hsv-着色"><span
+class="toc-section-number">2.4.3</span> HSV 着色</a></li>
+<li><a href="#lch-着色" id="toc-lch-着色"><span
+class="toc-section-number">2.4.4</span> LCH 着色</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#高级绘制算法" id="toc-高级绘制算法"><span
-class="toc-section-number">1.3</span> 高级绘制算法</a>
+class="toc-section-number">3</span> 高级绘制算法</a>
 <ul>
 <li><a href="#距离估计" id="toc-距离估计"><span
-class="toc-section-number">1.3.1</span> 距离估计</a></li>
+class="toc-section-number">3.1</span> 距离估计</a>
+<ul>
+<li><a href="#外部距离估计" id="toc-外部距离估计"><span
+class="toc-section-number">3.1.1</span> 外部距离估计</a></li>
+<li><a href="#内部距离估计" id="toc-内部距离估计"><span
+class="toc-section-number">3.1.2</span> 内部距离估计</a></li>
+</ul></li>
 <li><a href="#心形线与球检查" id="toc-心形线与球检查"><span
-class="toc-section-number">1.3.2</span> 心形线与球检查</a></li>
+class="toc-section-number">3.2</span> 心形线与球检查</a></li>
 <li><a href="#周期性检查" id="toc-周期性检查"><span
-class="toc-section-number">1.3.3</span> 周期性检查</a></li>
+class="toc-section-number">3.3</span> 周期性检查</a></li>
 <li><a href="#边界追踪-边缘检查" id="toc-边界追踪-边缘检查"><span
-class="toc-section-number">1.3.4</span> 边界追踪 / 边缘检查</a></li>
+class="toc-section-number">3.4</span> 边界追踪 / 边缘检查</a></li>
 <li><a href="#矩形检查" id="toc-矩形检查"><span
-class="toc-section-number">1.3.5</span> 矩形检查</a></li>
+class="toc-section-number">3.5</span> 矩形检查</a></li>
 <li><a href="#对称性利用" id="toc-对称性利用"><span
-class="toc-section-number">1.3.6</span> 对称性利用</a></li>
+class="toc-section-number">3.6</span> 对称性利用</a></li>
 <li><a href="#多线程" id="toc-多线程"><span
-class="toc-section-number">1.3.7</span> 多线程</a></li>
+class="toc-section-number">3.7</span> 多线程</a></li>
 <li><a href="#摄动理论与级数近似" id="toc-摄动理论与级数近似"><span
-class="toc-section-number">1.3.8</span> 摄动理论与级数近似</a></li>
+class="toc-section-number">3.8</span> 摄动理论与级数近似</a></li>
 </ul></li>
 <li><a href="#参考文献" id="toc-参考文献"><span
-class="toc-section-number">1.4</span> 参考文献</a></li>
-</ul></li>
+class="toc-section-number">4</span> 参考文献</a></li>
 </ul>
 </nav>
-<h1 data-number="1" id="mandelbrot-集的绘制算法"><span
-class="header-section-number">1</span> Mandelbrot 集的绘制算法</h1>
 <p>绘制 Mandelbrot
 集以及其他分形有许多程序和算法，其中一些已在分形生成软件中有所描述。这些程序使用各种算法来高效地确定各个像素的颜色。</p>
 <p><a href="videos/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogv"><img
@@ -97,13 +106,13 @@ alt="在 0.001643721971153 - 0.822467633298876i 处不断放大的影片的静�
 <p><a href="videos/Mandelbrot_sequence_new.webm"><img
 src="images/Mandelbrot_sequence_new_still.png"
 alt="不断放大的动画的静帧——点击可播放该动画（图像与动画：公有领域，Hankwang / Simpsons contributor）" /></a></p>
-<h2 data-number="1.1" id="逃逸时间算法"><span
-class="header-section-number">1.1</span> 逃逸时间算法</h2>
+<h1 data-number="1" id="逃逸时间算法"><span
+class="header-section-number">1</span> 逃逸时间算法</h1>
 <p>生成 Mandelbrot 集图像的最简单算法被称为“逃逸时间”（escape
 time）算法。对绘图区域中的每个 <em>x</em>、<em>y</em>
 点执行一次重复计算，并根据该计算的行为为该像素选定一种颜色。</p>
-<h3 data-number="1.1.1" id="未优化的朴素逃逸时间算法"><span
-class="header-section-number">1.1.1</span> 未优化的朴素逃逸时间算法</h3>
+<h2 data-number="1.1" id="未优化的朴素逃逸时间算法"><span
+class="header-section-number">1.1</span> 未优化的朴素逃逸时间算法</h2>
 <p>在未优化和已优化的逃逸时间算法中，每个点的 <em>x</em> 与 <em>y</em>
 位置都被用作重复（迭代）计算的起始值（下文将详细说明）。每次迭代的结果都作为下一次迭代的起始值。每次迭代时都会检查这些值是否已满足临界的“逃逸”（escape）条件，即“逃逸判据”（bailout）。一旦满足该条件，计算便停止，绘制该像素，然后检查下一个
 <em>x</em>、<em>y</em>
@@ -157,8 +166,8 @@ Mandelbrot 集，或至少非常接近它，并把该像素涂成黑色。</p>
 <p>要得到色彩丰富的集合图像，可以用各种函数（线性、指数等）之一把迭代次数的每个取值映射为一种颜色。一种不拖慢计算速度的实用做法是：以执行的迭代次数作为启动时初始化好的调色板的下标。例如，若颜色表有
 500 个表项，则颜色选择为 <em>n</em> mod 500，其中 <em>n</em>
 为迭代次数。</p>
-<h3 data-number="1.1.2" id="优化的逃逸时间算法"><span
-class="header-section-number">1.1.2</span> 优化的逃逸时间算法</h3>
+<h2 data-number="1.2" id="优化的逃逸时间算法"><span
+class="header-section-number">1.2</span> 优化的逃逸时间算法</h2>
 <p>上一节的代码为了清晰起见使用了未优化的内层 while
 循环。在未优化版本中，每次迭代必须执行五次乘法。为减少乘法次数，可以改用下面这段内层
 while 循环代码：</p>
@@ -205,15 +214,15 @@ while (x2 + y2 ≤ 4 and iteration &lt; max_iteration) do
 看似使乘法次数增加 1，但由于乘数是 2，代码可以通过
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">(x + x)y</annotation></semantics></math>
 来优化。</p>
-<h2 data-number="1.2" id="着色算法"><span
-class="header-section-number">1.2</span> 着色算法</h2>
+<h1 data-number="2" id="着色算法"><span
+class="header-section-number">2</span> 着色算法</h1>
 <p>除了绘制集合本身，人们还发展出了多种算法，用来</p>
 <ul>
 <li>以美观的方式高效地为集合着色</li>
 <li>展示数据的结构（科学可视化）</li>
 </ul>
-<h3 data-number="1.2.1" id="直方图着色"><span
-class="header-section-number">1.2.1</span> 直方图着色</h3>
+<h2 data-number="2.1" id="直方图着色"><span
+class="header-section-number">2.1</span> 直方图着色</h2>
 <p>一种更复杂的着色方法使用直方图，把每个像素与该像素在逃逸/跳出之前的最大迭代次数对应起来。这种方法会把颜色均匀地分配到相同的整体面积上，而且重要的是，它与所选择的最大迭代次数无关。<sup>[1]</sup></p>
 <p>该算法分为四遍。第一遍计算与每个像素相关联的迭代次数（但不绘制任何像素），把它们存入数组
 <code>IterationCounts[x][y]</code>，其中 <code>x</code>、<code>y</code>
@@ -293,8 +302,8 @@ color = palette[hue[m, n]]
 ...</code></pre>
 <p>最后，把算出的值用作调色板的下标等。</p>
 <p>该方法可以与下文的平滑着色方法结合使用，以获得更美观的图像。</p>
-<h3 data-number="1.2.2" id="连续平滑着色"><span
-class="header-section-number">1.2.2</span> 连续（平滑）着色</h3>
+<h2 data-number="2.2" id="连续平滑着色"><span
+class="header-section-number">2.2</span> 连续（平滑）着色</h2>
 <p>逃逸时间算法因其简单而广受欢迎。然而它会产生色彩条带，作为一种混叠现象，这会损害图像的美学价值。使用一种被称为“归一化迭代次数”（normalized
 iteration count）的算法可以改善这一点，<sup>[2][3]</sup>
 它在迭代之间提供平滑的颜色过渡。该算法利用迭代次数与势函数之间的联系，为每个
@@ -368,8 +377,8 @@ Bradshaw，署名许可）</figcaption>
     // iteration % 1 = fractional part of iteration.
     color:= linear_interpolate(color1, color2, iteration % 1)
     plot(Px, Py, color)</code></pre>
-<h3 data-number="1.2.3" id="指数映射与循环迭代"><span
-class="header-section-number">1.2.3</span> 指数映射与循环迭代</h3>
+<h2 data-number="2.3" id="指数映射与循环迭代"><span
+class="header-section-number">2.3</span> 指数映射与循环迭代</h2>
 <p>通常，我们渲染分形时，某一调色板的颜色沿分形出现的位置范围是固定的。如果我们希望把它们相对分形边界的位置加以偏移，或调整调色板以特定方式循环，那么在取得最终迭代次数、并将其传递给调色板以选取颜色之前，可以做几处简单的改动。</p>
 <p>在得到迭代次数之后，我们可以让颜色的取值范围变为非线性的。把一个归一化到
 [0,1] 区间的值取 <em>n</em>
@@ -386,15 +395,14 @@ alt="带阴影的 LCH 色彩空间指数循环着色（Ahhhh6980，CC BY-SA 4.0�
 色彩空间指数循环着色（Ahhhh6980，CC BY-SA 4.0）</figcaption>
 </figure>
 <p>然后我们就可以把 v 代入任何我们想要的生成颜色的算法中。</p>
-<h3 data-number="1.2.4" id="直接把迭代次数映射为颜色"><span
-class="header-section-number">1.2.4</span> 直接把迭代次数映射为颜色</h3>
+<h2 data-number="2.4" id="直接把迭代次数映射为颜色"><span
+class="header-section-number">2.4</span> 直接把迭代次数映射为颜色</h2>
 <p>有一点我们或许值得考虑：完全避免处理调色板或颜色混合。实际上有若干方法可以利用，通过就地构造颜色来生成平滑、一致的着色。</p>
-<h4 data-number="1.2.4.1"
-id="v-指归一化的经指数映射的循环迭代次数"><span
-class="header-section-number">1.2.4.1</span> v
-指归一化的、经指数映射的循环迭代次数</h4>
-<h4 data-number="1.2.4.2" id="fv-指-srgb-传递函数"><span
-class="header-section-number">1.2.4.2</span> f(v) 指 sRGB 传递函数</h4>
+<h3 data-number="2.4.1" id="v-指归一化的经指数映射的循环迭代次数"><span
+class="header-section-number">2.4.1</span> v
+指归一化的、经指数映射的循环迭代次数</h3>
+<h3 data-number="2.4.2" id="fv-指-srgb-传递函数"><span
+class="header-section-number">2.4.2</span> f(v) 指 sRGB 传递函数</h3>
 <p>一种朴素的颜色生成方法，是把 <strong>v</strong> 直接缩放到 255
 并这样传入 RGB：</p>
 <pre class="text"><code>rgb = [v * 255, v * 255, v * 255]</code></pre>
@@ -409,8 +417,8 @@ alt="HSV 渐变（Ahhhh6980，CC BY-SA 4.0）" />
 <figcaption aria-hidden="true">HSV 渐变（Ahhhh6980，CC BY-SA
 4.0）</figcaption>
 </figure>
-<h4 data-number="1.2.4.3" id="hsv-着色"><span
-class="header-section-number">1.2.4.3</span> HSV 着色</h4>
+<h3 data-number="2.4.3" id="hsv-着色"><span
+class="header-section-number">2.4.3</span> HSV 着色</h3>
 <p>HSV 着色可以通过把迭代次数从 [0,max_iter) 映射到 [0,360)，再取 1.5
 次幂，然后对 360 取模来实现。</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mi>/</mi><mi>m</mi><mi>a</mi><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mn>360</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>1.5</mn></msup><mrow><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">mod</mi><mo>&#8289;</mo></mrow><mspace width="0.222em"></mspace><mn>360</mn></mrow></mrow><annotation encoding="application/x-tex">h = ((i/max_i)360)^{1.5} \bmod 360</annotation></semantics></math></p>
@@ -424,8 +432,8 @@ alt="LCH 渐变（Ahhhh6980，CC BY-SA 4.0）" />
 <figcaption aria-hidden="true">LCH 渐变（Ahhhh6980，CC BY-SA
 4.0）</figcaption>
 </figure>
-<h4 data-number="1.2.4.4" id="lch-着色"><span
-class="header-section-number">1.2.4.4</span> LCH 着色</h4>
+<h3 data-number="2.4.4" id="lch-着色"><span
+class="header-section-number">2.4.4</span> LCH 着色</h3>
 <p>感知上最均匀的着色方法之一，是把处理后的迭代次数传入
 LCH。如果利用上面所述的指数映射与循环方法，我们可以把其结果用于明度（Luma）和色度（Chroma）通道；也可以对迭代次数做指数映射并缩放到
 360，再对 360 取模后作为色相。</p>
@@ -449,15 +457,15 @@ alt="不带阴影的指数映射循环 LCH 着色示例（Ahhhh6980，CC BY-SA 4
 <figcaption aria-hidden="true">不带阴影的指数映射循环 LCH
 着色示例（Ahhhh6980，CC BY-SA 4.0）</figcaption>
 </figure>
-<h2 data-number="1.3" id="高级绘制算法"><span
-class="header-section-number">1.3</span> 高级绘制算法</h2>
+<h1 data-number="3" id="高级绘制算法"><span
+class="header-section-number">3</span> 高级绘制算法</h1>
 <p>除了前面已经讨论过的简单而缓慢的逃逸时间算法之外，还有许多更高级的算法可用于加速绘制过程。</p>
-<h3 data-number="1.3.1" id="距离估计"><span
-class="header-section-number">1.3.1</span> 距离估计</h3>
+<h2 data-number="3.1" id="距离估计"><span
+class="header-section-number">3.1</span> 距离估计</h2>
 <p>可以计算点 <em>c</em>（位于外部或内部）到 Mandelbrot
 集边界上最近点的距离。<sup>[4][5]</sup></p>
-<h4 data-number="1.3.1.1" id="外部距离估计"><span
-class="header-section-number">1.3.1.1</span> 外部距离估计</h4>
+<h3 data-number="3.1.1" id="外部距离估计"><span
+class="header-section-number">3.1.1</span> 外部距离估计</h3>
 <p>Mandelbrot 集连通性的证明，实际上给出了
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
 的补集的单值化映射（及其导数）的公式。于是，由 Koebe
@@ -524,8 +532,8 @@ alt="这是用距离估计（DE）渲染的 Mandelbrot 集局部黑白图像（D
 集局部黑白图像（Duncan Champney，CC BY-SA 4.0）</figcaption>
 </figure>
 <p>距离估计也可以用来渲染 Mandelbrot 集与 Julia 集的三维图像。</p>
-<h4 data-number="1.3.1.2" id="内部距离估计"><span
-class="header-section-number">1.3.1.2</span> 内部距离估计</h4>
+<h3 data-number="3.1.2" id="内部距离估计"><span
+class="header-section-number">3.1.2</span> 内部距离估计</h3>
 <p>同样可以估计极限周期点（即双曲点）到 Mandelbrot
 集边界的距离。距离估计的上界 <em>b</em> 由下式给出<sup>[4]</sup></p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac><msubsup><mi>P</mi><mi>c</mi><mi>p</mi></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mrow><mrow><mo stretchy="true" form="prefix">|</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>c</mi></mrow></mfrac><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac><msubsup><mi>P</mi><mi>c</mi><mi>p</mi></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac><msubsup><mi>P</mi><mi>c</mi><mi>p</mi></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mfrac><mrow><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>c</mi></mrow></mfrac><msubsup><mi>P</mi><mi>c</mi><mi>p</mi></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac><msubsup><mi>P</mi><mi>c</mi><mi>p</mi></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">
@@ -598,8 +606,8 @@ alt="三维视图：Mandelbrot 集内部点轨道的最小绝对值（Paintthrea
 <figcaption aria-hidden="true">三维视图：Mandelbrot
 集内部点轨道的最小绝对值（Paintthread，公有领域）</figcaption>
 </figure>
-<h3 data-number="1.3.2" id="心形线与球检查"><span
-class="header-section-number">1.3.2</span> 心形线与球检查</h3>
+<h2 data-number="3.2" id="心形线与球检查"><span
+class="header-section-number">3.2</span> 心形线与球检查</h2>
 <p>改进计算的一种方法是事先判断给定点是否落在心形线（cardioid）内或二阶周期球（period-2
 bulb）内。在把该复数值送入逃逸时间算法之前，先检查：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><msqrt><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>−</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt><mo>,</mo></mrow><annotation encoding="application/x-tex">p = \sqrt{ \left(x - \frac{1}{4}\right)^2 + y^2 },</annotation></semantics></math></p>
@@ -612,8 +620,8 @@ bulb）内。在把该复数值送入逃逸时间算法之前，先检查：</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>q</mi><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo>−</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><msup><mi>y</mi><mn>2</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">q \left(q + \left(x - \frac{1}{4}\right)\right) \leq \frac{1}{4}y^2.</annotation></semantics></math></p>
 <p>三阶及更高阶的球芽没有等价的判定方法，因为它们并非完美圆形。<sup>[11]</sup>
 不过，可以判断点是否落在这些高阶球芽内部所内接的圆内，从而避免对球芽中许多（尽管不是全部）点进行迭代。</p>
-<h3 data-number="1.3.3" id="周期性检查"><span
-class="header-section-number">1.3.3</span> 周期性检查</h3>
+<h2 data-number="3.3" id="周期性检查"><span
+class="header-section-number">3.3</span> 周期性检查</h2>
 <p>为避免对集合内部的点进行大量迭代，可以执行周期性检查：检查迭代某个像素时到达的点此前是否已经到达过。若是，则该像素不可能发散，必定在集合内。周期性检查是一种权衡：记住这些点会消耗数据管理指令与内存，但可节省计算指令。不过，仅与上一次迭代进行比较，就能以很小的性能开销检测出许多周期。例如，在上面伪代码的
 while 循环中加入以下修改：</p>
 <pre class="text"><code>xold := 0
@@ -636,8 +644,8 @@ while (x*x + y*y ≤ 2*2 and iteration &lt; max_iteration) do
         yold := y</code></pre>
 <p>上面的代码每隔 20 次迭代保存一对新的 x、y 值，因此可以检测长度最多为
 20 个点的周期。</p>
-<h3 data-number="1.3.4" id="边界追踪-边缘检查"><span
-class="header-section-number">1.3.4</span> 边界追踪 / 边缘检查</h3>
+<h2 data-number="3.4" id="边界追踪-边缘检查"><span
+class="header-section-number">3.4</span> 边界追踪 / 边缘检查</h2>
 <figure>
 <img src="images/Mandelbrot_DEM_Sobel.png"
 alt="使用 Sobel 滤波器对 Mandelbrot 集双曲分支做边缘检测（Adam majewski，CC BY-SA 3.0）" />
@@ -654,8 +662,8 @@ alt="边界追踪动画——点击播放视频（Duncan Champney，CC BY-SA 4.0
 <p>在所示动画中，集合外部的点使用 1000
 次迭代的逃逸时间算法着色。追踪集合边界并填充它，而不是迭代内部点，使总迭代次数减少了
 93.16%。若迭代上限更高，收益还会更大。</p>
-<h3 data-number="1.3.5" id="矩形检查"><span
-class="header-section-number">1.3.5</span> 矩形检查</h3>
+<h2 data-number="3.5" id="矩形检查"><span
+class="header-section-number">3.5</span> 矩形检查</h2>
 <p>矩形检查是一种更古老、更简单的 Mandelbrot
 集绘制方法。其基本思想是：如果矩形边界上每个像素的迭代次数相同，那么这个矩形就可以安全地用该迭代次数填充。矩形检查法有多种变体，但它们都比边界追踪法慢，因为最终计算的像素更多。有一种变体只计算每个矩形的角像素，但这比计算整条边界更容易导致图像损坏，因此只有在使用约
 6×6 像素的小方块、且不从更大的方块向内递归时才效果尚可（Fractint
@@ -674,16 +682,16 @@ class="header-section-number">1.3.5</span> 矩形检查</h3>
 <p>与边界追踪一样，矩形检查只适用于具有单一离散颜色的区域。但即便外部区域使用平滑/连续着色，矩形检查仍能加速
 Mandelbrot
 集内部那片代价高昂的区域——除非内部区域也使用某种平滑着色方法，例如内部距离估计。</p>
-<h3 data-number="1.3.6" id="对称性利用"><span
-class="header-section-number">1.3.6</span> 对称性利用</h3>
+<h2 data-number="3.6" id="对称性利用"><span
+class="header-section-number">3.6</span> 对称性利用</h2>
 <p>Mandelbrot
 集的水平对称性使得当最终图像中出现实轴时，可以跳过部分渲染过程。不过，无论镜像的是哪一部分，渲染的点数都相同。</p>
 <p>Julia
 集关于原点对称。这意味着第一象限与第三象限对称，第二象限与第四象限对称。要同时支持
 Mandelbrot 集与 Julia
 集的对称性，需要对这两类不同的图形以不同方式处理对称。</p>
-<h3 data-number="1.3.7" id="多线程"><span
-class="header-section-number">1.3.7</span> 多线程</h3>
+<h2 data-number="3.7" id="多线程"><span
+class="header-section-number">3.7</span> 多线程</h2>
 <p>Mandelbrot 集与 Julia
 集的逃逸时间渲染极适合并行处理。在多核机器上，可以把待绘制的区域划分成一系列矩形区域，再将它们作为一组任务交给渲染线程池处理。这是一个“易并行”（embarrassingly
 parallel）<sup>[15]</sup>
@@ -700,8 +708,8 @@ alt="这段短视频展示了使用多线程与对称性、但关闭了边界追
 href="videos/Multi-threaded_mandelbrot_render_w_boundary_following_and_symmetry.webm"><img
 src="images/poster_Multi-threaded_mandelbrot_render_w_boundary_following_and_symmetry.jpg"
 alt="这段短视频展示了使用边界追踪、多线程与对称性的 Mandelbrot 集渲染过程——点击播放（Duncan Champney，CC BY-SA 4.0）" /></a></p>
-<h3 data-number="1.3.8" id="摄动理论与级数近似"><span
-class="header-section-number">1.3.8</span> 摄动理论与级数近似</h3>
+<h2 data-number="3.8" id="摄动理论与级数近似"><span
+class="header-section-number">3.8</span> 摄动理论与级数近似</h2>
 <p>放大倍数极高的图像需要超过大多数硬件浮点单元所提供的标准 64–128
 位左右的精度，从而迫使渲染器使用缓慢的
 “BigNum”（大数）或“任意精度”数学库来计算。不过，利用摄动理论可以加速这一过程。给定迭代式</p>
@@ -824,8 +832,8 @@ alt="缩放级别 1.01e-55 的摄动理论图像" /></td>
 </tr>
 </tbody>
 </table>
-<h2 data-number="1.4" id="参考文献"><span
-class="header-section-number">1.4</span> 参考文献</h2>
+<h1 data-number="4" id="参考文献"><span
+class="header-section-number">4</span> 参考文献</h1>
 <ol type="1">
 <li>“Newbie: How to map colors in the Mandelbrot
 set?”（http://www.fractalforums.com/programming/newbie-how-to-map-colors-in-the-mandelbrot-set/msg3465/#msg3465）。www.fractalforums.com。2007

@@ -6,8 +6,6 @@ source: "https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_se
 license: "Text: CC BY-SA 4.0 — see LICENSE"
 ---
 
-# Plotting algorithms for the Mandelbrot set
-
 There are many programs and algorithms used to plot the Mandelbrot set and other fractals, some of which are described in fractal-generating software. These programs use a variety of algorithms to determine the color of individual pixels efficiently.
 
 [![Still image of a movie of increasing magnification on $0.001643721971153 - 0.822467633298876i$ — click to play the movie (image and movie: public domain, YGingras)](images/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.png)](videos/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogv)
