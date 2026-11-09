@@ -2,64 +2,49 @@
 
 本文件记录本仓库（Mandelbrot 集绘制算法中文译本）的所有重要变更。
 
-格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
+格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，
+版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
-> 说明：本仓库目前尚未发布正式版本，也没有打 tag，因此条目一律以**日期 + 提交哈希**标识，
-> 不使用语义化版本号；将来开始发版时，再把条目改为版本号并补充 `compare` 链接。
+## [1.0.0] - 2026-11-09
 
-## 2026-11-09 — 贡献指南与 Issue/PR 模板（`6b02727`）
-
-### 新增
-
-- `CONTRIBUTING.md`：文件地图（区分源文件与构建产物）、校对与翻译约定、术语对照表、
-  提交信息与分支命名、媒体许可证要求、贡献许可声明。
-- `.github/ISSUE_TEMPLATE/translation.yml`：译文问题 / 校对建议模板（定位段落、贴英文原句、问题类型）。
-- `.github/ISSUE_TEMPLATE/build.yml`：构建、产物、图片与许可证问题模板。
-- `.github/ISSUE_TEMPLATE/config.yml`：关闭空白 issue，给出贡献指南与英文原条目链接。
-- `.github/pull_request_template.md`：核对清单（原文对照、`.md`/`.wiki` 同步、公式不动、
-  产物重建、`LICENSES.md` 与 `CHANGELOG.md` 更新）。
-
-### 变更
-
-- `README.md`：新增「参与贡献」小节，文件表补充贡献指南与模板条目。
-
-## 2026-11-09 — CHANGELOG 与中文 Wikitext 译本（`7b325ba`）
+首个正式版本：Mandelbrot 集绘制算法条目（英文维基百科 `oldid=1380046103`）的完整中文译本与配套工具。
 
 ### 新增
 
-- `plotting-algorithms-mandelbrot.zh-CN.wiki`：中文 **Wikitext** 译本。以英文维基百科条目
-  `Plotting algorithms for the Mandelbrot set`（`oldid=1380046103`）的 Wikitext 为蓝本，
-  沿用原条目的模板、图片文件名、`<ref>` 参考文献与分类结构，仅将可见文字译为中文；
-  LaTeX 公式与伪代码保持原样（118 处 `<math>`、21 条参考文献、20 处图片引用与原条目一一对应）。
-- `source_en.txt`：上述英文条目的 Wikitext 原文，作为译本的对照底稿一并入库。
-- `CHANGELOG.md`：本文件。
+**中文译本**
 
-### 变更
+- `plotting-algorithms-mandelbrot.zh-CN.md`：Markdown 源文件，公式为 LaTeX。
+- `plotting-algorithms-mandelbrot.zh-CN.html`：HTML，公式为 MathML。
+- `plotting-algorithms-mandelbrot.zh-CN.pdf`：PDF，XeLaTeX 排版，章节编号从 `1` / `1.1` 起。
+- `plotting-algorithms-mandelbrot.zh-CN.wiki`：Wikitext 译本，沿用原条目的模板、`[[File:...]]` 文件名、
+  `<ref>` 参考文献与分类结构；118 处 `<math>`、21 条参考文献、20 处图片引用与原条目一一对应，
+  公式与伪代码逐字保留。
 
-- `README.md`：新增 Wikitext 译本与英文 Wikitext 底稿的文件说明。
+**英文对照**
 
-## 2026-11-08 — 章节编号修正（`f7d16e0`）
+- `source_en.txt`：英文维基百科条目的 Wikitext 底稿，译本对照基准。
+- `plotting-algorithms-mandelbrot.en.md` / `.html` / `.pdf`：由原始 PDF 转出的英文原文。
 
-### 修复
+**许可证与媒体**
 
-- 章节编号：将条目标题移入 YAML 元数据（`title` / `subtitle`），正文从二级标题开始，
-  构建时使用 `--shift-heading-level-by=-1` 提升标题层级，使 PDF / HTML 中的章节编号
-  从 `1`、`1.1` 起而非 `0.1` 起。
-- 随之重新生成 `plotting-algorithms-mandelbrot.zh-CN.html` / `.pdf`。
-
-## 2026-11-08 — 中文译本初始版本（`8749c6b`）
-
-### 新增
-
-- Mandelbrot 集绘制算法中文译本：
-  - `plotting-algorithms-mandelbrot.zh-CN.md`（Markdown 源文件，公式为 LaTeX）
-  - `plotting-algorithms-mandelbrot.zh-CN.html`（HTML，公式为 MathML）
-  - `plotting-algorithms-mandelbrot.zh-CN.pdf`（PDF，XeLaTeX 排版）
-- 英文原文（由原始 PDF 转出的 Markdown / HTML / PDF）：
-  `plotting-algorithms-mandelbrot.en.md` / `.html` / `.pdf`
-- `LICENSES.md`：原文页面全部图片与视频的许可证、作者及来源逐项清单。
 - `LICENSE`：正文许可证全文（CC BY-SA 4.0）。
+- `LICENSES.md`：原文页面全部图片与视频的许可证、作者及来源逐项清单。
 - `images/`、`videos/`：原文页面图片与视频的本地副本（含视频静帧封面）。
-- `assets/style.css`：HTML 样式表（CC0）。
 - `Original_PDF/`：转换所用原始 PDF 与抓取说明。
-- `README.md`：仓库说明、转换方式、重新构建 PDF / HTML 的步骤与许可证汇总。
+
+**文档与协作**
+
+- `README.md`：仓库说明、转换方式、重新构建 PDF / HTML 的步骤、许可证汇总。
+- `CHANGELOG.md`：本文件。
+- `CONTRIBUTING.md`：文件地图（源文件 vs 构建产物）、校对与翻译约定、术语对照表、
+  提交规范、媒体许可证要求、贡献许可声明。
+- `.github/ISSUE_TEMPLATE/`：译文问题 / 校对建议模板、构建与文件问题模板，关闭空白 issue。
+- `.github/pull_request_template.md`：改动说明与核对清单。
+- `assets/style.css`：HTML 样式表（CC0）。
+
+### 说明
+
+- 译文按“信、达、雅”直译为主，术语首次出现时给出英文原文；伪代码与代码片段不翻译关键字。
+- 中文译文为 CC BY-SA 4.0 文本的演绎作品，沿用 CC BY-SA 4.0；媒体文件许可逐项见 `LICENSES.md`。
+
+[1.0.0]: https://github.com/MarchBeta2087/plotting-mandel-zh-cn/releases/tag/v1.0.0
