@@ -1,0 +1,73 @@
+name: 译文问题 / 校对建议
+description: 报告错译、漏译、术语不一致或格式问题，也可提交人工校对意见
+title: "[译文] "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请尽量定位到**具体文件与段落**，并附上 `source_en.txt` 中的英文原句，方便核对。
+        只涉及一两处小改的话，直接提 PR 更快。
+  - type: dropdown
+    id: file
+    attributes:
+      label: 涉及文件
+      multiple: true
+      options:
+        - plotting-algorithms-mandelbrot.zh-CN.md
+        - plotting-algorithms-mandelbrot.zh-CN.wiki
+        - 两者都有
+        - README.md / CONTRIBUTING.md / LICENSES.md
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: 章节或位置
+      description: 小节标题、approx. 行号，或直接引用一小段原文
+      placeholder: 例如「### 周期性检查」第 2 段
+    validations:
+      required: true
+  - type: textarea
+    id: english
+    attributes:
+      label: 英文原文
+      description: 从 source_en.txt 复制，保持原样
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前译文
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: 建议译文或修改
+      description: 给出可直接采用的改法最佳
+      render: text
+    validations:
+      required: false
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 错译 / 语义偏差
+        - 漏译 / 多译
+        - 术语不统一
+        - 公式或伪代码被改动
+        - 标点、格式、链接、图注
+        - 译法取舍（想讨论）
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已对照 source_en.txt 核对，而非仅凭中文语感
+          required: true

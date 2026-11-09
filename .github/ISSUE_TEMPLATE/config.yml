@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 阅读贡献指南
+    url: https://github.com/MarchBeta2087/plotting-mandel-zh-cn/blob/main/CONTRIBUTING.md
+    about: 文件地图、术语表、提交与构建约定
+  - name: 英文原条目
+    url: https://en.wikipedia.org/wiki/Plotting_algorithms_for_the_Mandelbrot_set
+    about: 译文以该条目（oldid=1380046103）为准

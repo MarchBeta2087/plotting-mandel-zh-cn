@@ -21,6 +21,8 @@
 | [plotting-algorithms-mandelbrot.en.pdf](plotting-algorithms-mandelbrot.en.pdf) | 英文原文（PDF） |
 | [LICENSES.md](LICENSES.md) | 所有图片 / 视频的许可证、作者与来源 |
 | [CHANGELOG.md](CHANGELOG.md) | 变更日志 |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | 贡献指南：文件地图、术语表、校对与提交约定 |
+| `.github/ISSUE_TEMPLATE/`、`.github/pull_request_template.md` | Issue / PR 模板 |
 | [LICENSE](LICENSE) | 正文许可证全文（CC BY-SA 4.0） |
 | `images/`、`videos/` | 原文页面的图片与视频（许可见 LICENSES.md） |
 | `assets/style.css` | HTML 样式表（CC0） |
@@ -64,6 +66,11 @@ PowerShell（Windows）：
 ./pandoc-md2pdf-md2html/md2pdf.ps1  plotting-algorithms-mandelbrot.zh-CN.md -Cjk -Toc -NumberSections -Output plotting-algorithms-mandelbrot.zh-CN.pdf -ExtraArgs '--shift-heading-level-by=-1'
 ./pandoc-md2pdf-md2html/md2html.ps1 plotting-algorithms-mandelbrot.zh-CN.md -Toc -NumberSections -NoCss -Css assets/style.css -Output plotting-algorithms-mandelbrot.zh-CN.html -ExtraArgs '--shift-heading-level-by=-1'
 ```
+
+## 参与贡献
+
+欢迎勘误与人工校对：请先读 [CONTRIBUTING.md](CONTRIBUTING.md)（含术语表与“改哪个文件”的说明），
+再按 Issue / PR 模板提交。译文与原文的对照底稿是 `source_en.txt`。
 
 ## 许可证
 
