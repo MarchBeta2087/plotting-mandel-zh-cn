@@ -2,10 +2,14 @@
 
 本文件记录本仓库（Mandelbrot 集绘制算法中文译本）的所有重要变更。
 
-格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，
-版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
+格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
+
+> 说明：本仓库目前尚未发布正式版本，也没有打 tag，因此历史条目以**日期 + 提交哈希**标识，
+> 不使用语义化版本号；将来开始发版时，再把条目改为版本号并补充 `compare` 链接。
 
 ## [未发布]
+
+（即本仓库当前分支上待合并的变更；合并后视情况改用日期或版本号标识。）
 
 ### 新增
 
@@ -20,7 +24,7 @@
 
 - `README.md`：新增 Wikitext 译本与英文 Wikitext 底稿的文件说明。
 
-## [0.2.0] - 2026-11-08
+## 2026-11-08 — 章节编号修正（`f7d16e0`）
 
 ### 修复
 
@@ -29,7 +33,7 @@
   从 `1`、`1.1` 起而非 `0.1` 起。
 - 随之重新生成 `plotting-algorithms-mandelbrot.zh-CN.html` / `.pdf`。
 
-## [0.1.0] - 2026-11-08
+## 2026-11-08 — 中文译本初始版本（`8749c6b`）
 
 ### 新增
 
@@ -45,7 +49,3 @@
 - `assets/style.css`：HTML 样式表（CC0）。
 - `Original_PDF/`：转换所用原始 PDF 与抓取说明。
 - `README.md`：仓库说明、转换方式、重新构建 PDF / HTML 的步骤与许可证汇总。
-
-[未发布]: https://github.com/MarchBeta2087/plotting-mandel-zh-cn/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/MarchBeta2087/plotting-mandel-zh-cn/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/MarchBeta2087/plotting-mandel-zh-cn/releases/tag/v0.1.0
