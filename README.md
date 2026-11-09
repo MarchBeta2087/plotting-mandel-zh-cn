@@ -5,7 +5,7 @@
 仓库内容：
 
 - 由原始 PDF 转换而来的 **Markdown 原文**（英文，公式为 LaTeX）
-- **中文译文**（Markdown / HTML / PDF）
+- **中文译文**（Markdown / HTML / PDF / Wikitext）
 - 原文页面全部 **图片与视频** 的本地副本及**逐项许可证说明**（[LICENSES.md](LICENSES.md)）
 - 使用 Pandoc 生成 PDF / HTML 的构建脚本来自另一仓库：[pandoc-md2pdf-md2html](https://github.com/MarchBeta2087/pandoc-md2pdf-md2html)（CC0）
 
@@ -14,10 +14,13 @@
 | [plotting-algorithms-mandelbrot.zh-CN.md](plotting-algorithms-mandelbrot.zh-CN.md) | 中文译文（Markdown 源文件） |
 | [plotting-algorithms-mandelbrot.zh-CN.html](plotting-algorithms-mandelbrot.zh-CN.html) | 中文译文（HTML，公式为 MathML） |
 | [plotting-algorithms-mandelbrot.zh-CN.pdf](plotting-algorithms-mandelbrot.zh-CN.pdf) | 中文译文（PDF，XeLaTeX 排版） |
+| [plotting-algorithms-mandelbrot.zh-CN.wiki](plotting-algorithms-mandelbrot.zh-CN.wiki) | 中文译文（Wikitext，沿用原条目的模板、图片、`<ref>` 与分类） |
 | [plotting-algorithms-mandelbrot.en.md](plotting-algorithms-mandelbrot.en.md) | 英文原文（由 PDF 转出的 Markdown） |
+| [source_en.txt](source_en.txt) | 英文维基百科条目原文（Wikitext 底稿，`oldid=1380046103`） |
 | [plotting-algorithms-mandelbrot.en.html](plotting-algorithms-mandelbrot.en.html) | 英文原文（HTML） |
 | [plotting-algorithms-mandelbrot.en.pdf](plotting-algorithms-mandelbrot.en.pdf) | 英文原文（PDF） |
 | [LICENSES.md](LICENSES.md) | 所有图片 / 视频的许可证、作者与来源 |
+| [CHANGELOG.md](CHANGELOG.md) | 变更日志 |
 | [LICENSE](LICENSE) | 正文许可证全文（CC BY-SA 4.0） |
 | `images/`、`videos/` | 原文页面的图片与视频（许可见 LICENSES.md） |
 | `assets/style.css` | HTML 样式表（CC0） |
@@ -29,6 +32,7 @@
 2. 由于 PDF 打印过程中公式被渲染为字形序列（无 LaTeX 源），为保证**公式与伪代码零失真**，转换时以该 PDF 所对应的维基百科修订版本 `oldid=1380046103` 的 wikitext 作为对照，将公式一一还原为 LaTeX、图片还原为原图文件引用。
 3. 页面上的图片与视频改为引用 Commons 原始文件（`images/`、`videos/`），视频另附静帧封面，便于 PDF / 离线阅读。
 4. 中文译文按“信、达、雅”原则直译为主，术语首次出现时给出英文原文；伪代码与代码片段保持原样（不翻译关键字）。
+5. `plotting-algorithms-mandelbrot.zh-CN.wiki` 在同一份底稿上改写为 Wikitext：保留原条目的 `{{templates}}`、`[[File:...]]` 文件名、`<ref>` 参考文献与分类结构，只翻译可见文字，公式与伪代码逐字保留，便于与英文原条目逐段对照或移植到 MediaWiki。
 
 ## 重新构建 PDF / HTML
 

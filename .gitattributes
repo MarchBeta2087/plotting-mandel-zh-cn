@@ -1,5 +1,6 @@
 * text=auto
 *.md   text eol=lf
+*.wiki text eol=lf
 *.png  binary
 *.jpg  binary
 *.webm binary
