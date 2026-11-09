@@ -7,6 +7,22 @@
 > 说明：本仓库目前尚未发布正式版本，也没有打 tag，因此条目一律以**日期 + 提交哈希**标识，
 > 不使用语义化版本号；将来开始发版时，再把条目改为版本号并补充 `compare` 链接。
 
+## 2026-11-09 — 贡献指南与 Issue/PR 模板（`6b02727`）
+
+### 新增
+
+- `CONTRIBUTING.md`：文件地图（区分源文件与构建产物）、校对与翻译约定、术语对照表、
+  提交信息与分支命名、媒体许可证要求、贡献许可声明。
+- `.github/ISSUE_TEMPLATE/translation.yml`：译文问题 / 校对建议模板（定位段落、贴英文原句、问题类型）。
+- `.github/ISSUE_TEMPLATE/build.yml`：构建、产物、图片与许可证问题模板。
+- `.github/ISSUE_TEMPLATE/config.yml`：关闭空白 issue，给出贡献指南与英文原条目链接。
+- `.github/pull_request_template.md`：核对清单（原文对照、`.md`/`.wiki` 同步、公式不动、
+  产物重建、`LICENSES.md` 与 `CHANGELOG.md` 更新）。
+
+### 变更
+
+- `README.md`：新增「参与贡献」小节，文件表补充贡献指南与模板条目。
+
 ## 2026-11-09 — CHANGELOG 与中文 Wikitext 译本（`7b325ba`）
 
 ### 新增
