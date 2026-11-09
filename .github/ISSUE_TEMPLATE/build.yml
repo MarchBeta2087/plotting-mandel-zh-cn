@@ -1,0 +1,38 @@
+name: 构建 / 文件问题
+description: HTML、PDF 构建失败，产物与源文件不一致，或图片、视频、许可证缺失
+title: "[构建] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类别
+      options:
+        - 生成 HTML / PDF 失败
+        - 产物与 .md 不一致（未重新生成）
+        - 公式、代码块、章节编号渲染异常
+        - 图片 / 视频缺失或链接失效
+        - LICENSES.md 缺项或信息有误
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 现象描述
+      description: 报错信息、命令、产物截图或文件路径
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 环境
+      placeholder: 例如 Windows 11 / Pandoc 3.1.11 / MiKTeX 24.1
+    validations:
+      required: false
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      render: bash
+    validations:
+      required: false
